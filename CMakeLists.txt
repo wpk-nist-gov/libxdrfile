@@ -1,6 +1,10 @@
 cmake_minimum_required ( VERSION 2.8.8 )
 enable_language (C)
 
+if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+   cmake_policy(SET CMP0042 NEW)
+endif()
+
 project ( xdrfile NONE )
 
 # Set the type/configuration of build to perform
